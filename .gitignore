@@ -7,6 +7,9 @@
 *.pm.tdy
 *.bs
 
+# vim
+*~
+
 # Devel::Cover
 cover_db/
 
