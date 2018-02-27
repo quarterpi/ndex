@@ -133,10 +133,3 @@ my $filename = strip_path_and_extension($input);
 my $hash = parse_files_and_dirs($input);
 write_to_json_file($filename, $hash);
 
-# attempt at sorting keys alphanumerically not working
-#my @keys = sort {
-#  my ($aa) = $a =~ /^([A-Za-z]+)(\d*)/;
-#  my ($bb) = $b =~ /^([A-Za-z]+)(\d*)/;
-#} keys %hash;
-
-
