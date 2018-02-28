@@ -1,9 +1,19 @@
 #!/usr/local/bin/perl
+package NDex;
 use strict;
 use warnings;
 use feature qw(switch);
 use autodie;  # die if there is an issue reading or writing from file
 use JSON;     # use JSON package from cpan
+use Exporter;
+
+our @ISA= qw( Exporter );
+
+# can be exported
+our @EXPORT_OK = qw( strip_path_and_extension );
+
+# exported by default
+our @EXPORT = qw( dir_file_die );
 
 # Checks a given path and returns either Directory, File, or False
 # Param1: the file path to check
@@ -128,8 +138,8 @@ sub parse_files_and_dirs {
 
 # Ask the user to give us the file they would like to process
 
-my $input = request_files_from_user(); 
-my $filename = strip_path_and_extension($input);
-my $hash = parse_files_and_dirs($input);
-write_to_json_file($filename, $hash);
+#my $input = request_files_from_user(); 
+#my $filename = strip_path_and_extension($input);
+#my $hash = parse_files_and_dirs($input);
+#write_to_json_file($filename, $hash);
 
